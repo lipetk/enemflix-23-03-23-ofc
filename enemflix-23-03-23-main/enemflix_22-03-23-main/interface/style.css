@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #131313;
+}
+
+.nav {
+    position: fixed;
+     /* background-color: rgb(4, 75, 19); */
+    background-color: #111; 
+    width: 20vw;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+    
+}
+
+/* barra de rolagem */
+.scroll{
+    display: flex;
+    overflow-y: auto;
+    width: 60%;
+    
+
+}
+::-webkit-scrollbar{
+    width: 3px;
+    
+}
+::-webkit-scrollbar-track-piece{
+    background-color: transparent;
+    width: 3vw;
+
+}
+::-webkit-scrollbar-thumb{
+    background-color: #21842b;
+}
+
+/* Logo do EnemFlix */
+.nav-logo{
+    object-fit: contain;
+    width: 10vw;
+    margin-top: 2vw;
+    margin-bottom: 4%;
+    
+}
+
+
+
+/* Matérias */
+.button_nav{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 90%;
+    text-transform: uppercase;
+}
+
+.button_nav:hover{  
+    color: #21842b;
+    transition: all 0.2s;
+}
+
+.categorias{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+}
+
+.categorias-icon{
+    margin-right: 15%;
+}
+
+
+
+/* botão de informações */
+
+header{
+    padding: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+
+}
+
+
+.inf{
+    display: flex;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.789);
+    margin-left: 1%;
+}
+
+/* barra de pesquisa */
+.search-box {
+    
+    background: rgba(255, 255, 255, 0.521);
+    height: 0rem;
+    padding: 5% 0%;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8%;
+    box-shadow: 0px 0px 10px 0px rgb(196, 196, 196);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0px;
+    font-size: 90%;
+    color: black;
+    line-height: 4rem;
+    width: 0;
+    transition:.5s ;
+    
+}
+
+::placeholder{
+    padding-left: 0.5vw;
+}
+
+
+.search-btn{
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    background:#ffffffbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+::-webkit-input-placeholder {
+    color: #f1f1f1b0;
+}
+.search-box:hover > 
+.search-txt {
+    width: 10vw;
+    height: 20vw;
+}
+.search-box:hover > .search-btn {
+    background: #f1f1f1b0;
+}
+
+
+
+
+
+
+
+/* inicio da criação do banner */
+.banner{
+    background-image: url('/img/banner.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    object-fit: contain;
+    height: 100%;
+}
+
+/* configurar as margens, padding e altura da div banner */
+.banner_contents{
+    margin-left: 20%;
+    padding-top: 20%;
+    height: 40%;
+}
+
+
+
+
+/* configurações da descrição */
+.banner_description{
+    width: 45rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    max-width: 360px;
+    height: 180px;
+}
+
+
+
+
+
+
+/* row */
+.row_poster{
+    width: 100%;
+    object-fit: contain;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: trasform 450ms;    
+}
+
+.row_posters{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 2%;
+}
+
+/* animação do poster */
+.row_poster:hover {
+    transform: scale(1.08);
+}
+
+/* poster grade*/
+.row_posterLarge{
+    max-height: 250px;
+}
+
+/* poster largo */
+.row_posterLarge:hover{
+    transform: scale(1.09);
+}
+
+/* cor branca e margem esquerda de 20px */
+.row {
+    color: white;
+    margin-left: 22%;
+}
+
+/* configurar a barra de rolagem */
+.row_posters::-webkit-scrollbar {
+    display: none;
+}
